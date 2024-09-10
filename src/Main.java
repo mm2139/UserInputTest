@@ -4,15 +4,14 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        int userNum;
 
-        System.out.print("Hello! What is your number?");
-        userNum = scan.nextInt();
+        System.out.println("How much was your online purchase?");
 
-        if (userNum%2 == 0) {
-            System.out.println("Your number is EVEN");
-        } else {
-            System.out.println("Your number is ODD");
+        double purchasePrice = scan.nextDouble();
+
+        double totalPrice = purchasePrice*1.05 + 2.99; //5% tax and 2.99 shipping
+
+        System.out.println("Your  total, including tax and shipping, is " + totalPrice);
+
         }
     }
-}
